@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title> 避難者情報表示 </title>
+     <link rel="stylesheet" href="bousaireg.css" type="text/css">
+
+     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+     <!-- <script> -->
+     <!--   $('iframe').on('load', function(){ -->
+     <!--   $(this).height(this.contentWindow.document.documentElement.scrollHeight); -->
+     <!--   }).trigger('load'); -->
+     <!-- </script> -->
+  </head>
+  <body>
+
+    <div class="frame">
+    <iframe src="https://script.google.com/macros/s/AKfycbzuCi8uTyKBDC-uBFH_jHf96o2YI-S-1UxltHVsAk_QvnQSEHYxJE1aEp2-8qC1LLSF/exec" allow="fullscreen"></iframe>
+    </div>
+
+    <script>
+    <!--   ele = document.getElementById("pframe"); -->
+
+    <!--   function getheight(){ -->
+    <!--   ele.height = ele.contentWindow.document.body.scrollHeight + "px"; -->
+    <!--   } -->
+    $(document).ready(function(){
+    $('iframe').load(function(){
+    if (typeof $(this).attr('height') == 'undefined') {
+    $(this).height(this.contentWindow.document.documentElement.scrollHeight+10);
+    }
+    });
+    $('iframe').triggerHandler('load');
+    });
+    </script>
+
+  </body>
+</html>
